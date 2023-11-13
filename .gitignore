@@ -1,0 +1,6 @@
+# dependencies
+/node_modules
+.env
+/ignore-this-dir
+cookies.json
+credentials.json

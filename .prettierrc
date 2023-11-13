@@ -1,0 +1,19 @@
+{
+  "env": {
+  	"node": true
+  },
+  "extends": ["eslint:recommended"],
+  "rules": {
+  	"no-console": "off"
+  },
+  "singleQuote": true,
+  "semi": false,
+  "trailingComma": "all",
+  "useTabs": true,
+  "tabWidth": 3,
+  "printWidth": 95,
+  "bracketSameLine": false,
+  "maxEmptyLines": 4,
+  "proseWrap": "never",
+  "bracketSpacing": true
+}

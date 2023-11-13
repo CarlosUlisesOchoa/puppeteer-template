@@ -1,0 +1,37 @@
+{
+	"name": "base-scrapper",
+	"version": "1.0.0",
+	"description": "scrapper",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"preinstall": "npx only-allow pnpm",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"precommit": "lint-staged"
+	},
+	"keywords": [
+		"puppeteer"
+	],
+	"author": "Carlos Ochoa",
+	"license": "ISC",
+	"dependencies": {
+		"csv-parser": "^3.0.0",
+		"csv-writer": "^1.6.0",
+		"date-fns": "^2.29.3",
+		"dotenv": "^16.0.3",
+		"puppeteer": "^19.7.1",
+		"puppeteer-extra": "^3.3.4",
+		"puppeteer-extra-plugin-adblocker": "^2.13.5",
+		"puppeteer-extra-plugin-stealth": "^2.11.1"
+	},
+	"devDependencies": {
+		"eslint": "^8.34.0",
+		"lint-staged": "^12.5.0",
+		"prettier": "^2.8.4"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx,json,css,scss,md}": [
+			"prettier --write"
+		]
+	}
+}
