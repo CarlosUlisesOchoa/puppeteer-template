@@ -1,6 +1,7 @@
 import { logger } from '../utils/logger.js'
 import { getLoginCredentials } from './services/loginService.js'
-import { DOMAIN, CREDENTIALS_FILE, DEFAULT_TIMEOUT } from '../config.js'
+import { CREDENTIALS_FILE, DEFAULT_TIMEOUT } from '../config.js'
+import { LOGIN_URL } from '../urls.js'
 
 export async function login({ page }) {
 	//
@@ -13,10 +14,10 @@ export async function login({ page }) {
 		// Lets get user's credentials from CREDENTIALS_FILE
 		const credentials = await getLoginCredentials(CREDENTIALS_FILE)
 
-		logger.info(`Loading ${DOMAIN}/login`)
+		logger.info(`Loading ${LOGIN_URL}`)
 		logger.info('')
 
-		await page.goto(`https://${DOMAIN}/login`)
+		await page.goto(LOGIN_URL)
 
 		await page.waitForSelector('#form-signin input[name="username"]')
 
